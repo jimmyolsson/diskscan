@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiskScan: See what's eating your disk.</title>
+  <meta name="description" content="A fast, free NTFS disk space analyser for Windows with a cushion treemap.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1b1d21">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DiskScan: See what's eating your disk.">
+  <meta property="og:description" content="A fast, free NTFS disk space analyser for Windows with a cushion treemap.">
+  <meta property="og:url" content="https://jimmyolsson.github.io/diskscan/">
+  <meta property="og:image" content="https://jimmyolsson.github.io/diskscan/screenshots/overview.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="800">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DiskScan: See what's eating your disk.">
+  <meta name="twitter:description" content="A fast, free NTFS disk space analyser for Windows with a cushion treemap.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="badge.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="logo.png" alt="" width="128" height="128">
+    <h1>DiskScan</h1>
+    <p class="tagline">See what's eating your disk.</p>
+    <p class="subtitle">A fast, free NTFS disk space analyser for Windows with a cushion treemap.</p>
+    <a id="download" class="button" href="https://github.com/jimmyolsson/diskscan/releases/latest/download/diskscan-windows-x86_64.zip">Download for Windows</a>
+    <p id="release-badge" hidden></p>
+    <p class="fine">Free to download and use. One portable <code>diskscan.exe</code>, no installer.</p>
+  </header>
+
+  <main>
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <h2 id="screenshots-title">Screenshots</h2>
+      <figure>
+        <img src="screenshots/overview.png" alt="DiskScan after a Scan: the Tree view and File type list above, the Treemap below." width="1280" height="800" loading="lazy">
+        <figcaption>A whole Volume at a glance: the Tree view and File type list above, the cushion Treemap below.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/zoomed.png" alt="The Treemap zoomed into a sub-folder, with the breadcrumb path above it and a file selected." width="1280" height="800" loading="lazy">
+        <figcaption>Zoom into any folder; the breadcrumbs show where you are and Back/Forward retrace your steps.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/highlight.png" alt="One File type highlighted in the Treemap with the Colours window open." width="1280" height="800" loading="lazy">
+        <figcaption>Highlight a File type to see where it lives, and choose how File types are coloured.</figcaption>
+      </figure>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul class="features">
+        <li><strong>Fast Scan.</strong> Reads the NTFS Master File Table directly instead of walking folders, so a whole Volume is scanned in seconds.</li>
+        <li><strong>Cushion Treemap.</strong> Every file is a shaded Rectangle sized by how much space it uses; folders read as raised shapes with their sub-folders on top.</li>
+        <li><strong>File type Colouring and Highlight.</strong> Colour by size rank or by your own Colour groups, then highlight one File type to see every place it sits.</li>
+        <li><strong>Zoom root with breadcrumbs.</strong> Zoom into any folder, jump back up via the breadcrumb bar, and move Back and Forward through your Zoom history.</li>
+        <li><strong>Reveal in Explorer.</strong> Double-click a file in the Tree view or the Treemap to open its folder with the file selected.</li>
+        <li><strong>Allocated or Logical size.</strong> See what files occupy on disk (the default) or the bytes they claim to hold, with one toggle.</li>
+        <li><strong>Hard links counted once.</strong> A file with several names shows under each folder but its size is only counted once.</li>
+      </ul>
+    </section>
+
+    <section id="requirements" aria-labelledby="requirements-title">
+      <h2 id="requirements-title">Requirements</h2>
+      <ul>
+        <li>Windows 10 or 11, 64-bit (x64).</li>
+        <li>NTFS Volumes. Other file systems (FAT32, exFAT, network shares) cannot be scanned.</li>
+        <li>Administrator rights. Windows only lets elevated programs read a Volume's Master File Table, which is what makes the Scan fast, so DiskScan asks for them when it starts. It only reads; it never changes or deletes files.</li>
+      </ul>
+    </section>
+
+    <section id="smartscreen" aria-labelledby="smartscreen-title">
+      <h2 id="smartscreen-title">"Windows protected your PC"</h2>
+      <p>The first time you run <code>diskscan.exe</code>, Windows SmartScreen may show this warning. DiskScan is not code-signed (signing certificates cost money every year), and SmartScreen warns about unsigned programs it has not seen often. It does not mean anything harmful was found.</p>
+      <p>To run it, click <strong>More info</strong>, check that the app is <code>diskscan.exe</code>, then click <strong>Run anyway</strong>. Then accept the administrator prompt. If you prefer, compare the zip against <code>SHA256SUMS.txt</code> from the release page first.</p>
+    </section>
+  </main>
+
+  <footer>
+    <nav aria-label="Project links">
+      <a href="https://github.com/jimmyolsson/diskscan/releases">All releases and release notes</a>
+      <a href="https://github.com/jimmyolsson/diskscan/issues">Report a bug</a>
+    </nav>
+    <p>Made by <a href="https://github.com/jimmyolsson">Jimmy Olsson (@jimmyolsson)</a>.</p>
+  </footer>
+</body>
+</html>

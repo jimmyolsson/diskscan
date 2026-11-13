@@ -1,0 +1,227 @@
+/* Palette mirrors the app's dark theme (crates/app/src/app.rs). */
+:root {
+  --panel: #1b1d21;
+  --raised: #23262b;
+  --track: #2c3037;
+  --primary: #e6e8eb;
+  --secondary: #9aa1ab;
+  --accent: #4da3ff;
+  --selection: #1f3a5c;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--panel);
+  color: var(--primary);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+code {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;
+  font-size: 0.92em;
+  background: var(--track);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.hero,
+main,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.logo {
+  width: 112px;
+  height: 112px;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.tagline {
+  font-size: clamp(1.25rem, 4.5vw, 1.6rem);
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.subtitle {
+  color: var(--secondary);
+  max-width: 36rem;
+  margin: 0.25rem auto 1.75rem;
+}
+
+.button {
+  display: inline-block;
+  min-height: 48px;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #0d1117;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #7bbcff;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+#release-badge {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  margin: 0.75rem 0 0;
+}
+
+.fine {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+section {
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--track);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+figure {
+  margin: 0 0 2rem;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--track);
+  border-radius: 6px;
+  background: var(--raised);
+}
+
+figcaption {
+  color: var(--secondary);
+  margin-top: 0.6rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.features li {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  background: var(--raised);
+  border: 1px solid var(--track);
+  border-radius: 6px;
+}
+
+.features strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+#smartscreen {
+  background: var(--raised);
+  border: 1px solid var(--track);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.25rem 1.25rem 0.5rem;
+  margin: 2.25rem 0;
+}
+
+footer {
+  border-top: 1px solid var(--track);
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .hero,
+  main,
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .logo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
