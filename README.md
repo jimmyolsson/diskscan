@@ -19,7 +19,7 @@ The zip holds a single portable `diskscan.exe`: unzip it anywhere and run it. Th
 
 - Windows 10 or Windows 11, 64-bit (x64).
 - NTFS Volumes. Other file systems (FAT32, exFAT, network drives) cannot be scanned.
-- Run as administrator. DiskScan reads the Volume's Master File Table (MFT) directly instead of walking every folder, which is what makes a Scan fast. Windows only allows raw access to the MFT from an elevated process, so Windows shows a UAC prompt when DiskScan starts. It only reads; it never changes or deletes files.
+- Run as administrator. DiskScan reads the Volume's Master File Table (MFT) directly instead of walking every folder, which is what makes a Scan fast. Windows only allows raw access to the MFT from an elevated process, so Windows shows a UAC prompt when DiskScan starts. DiskScan itself only reads. The right-click menu is Windows Explorer's own, so any action you choose there (open, delete, properties…) is carried out by Windows exactly as it would be in Explorer.
 
 ### "Windows protected your PC"
 
@@ -34,6 +34,7 @@ The first time you run `diskscan.exe`, Windows SmartScreen may show a blue "Wind
 - **Highlight**: select a File type to emphasise every one of its Rectangles while dimming the rest; the Type filter narrows the list as you type.
 - **Zoom root with breadcrumbs and Zoom history**: focus the Treemap on any folder, jump back up via the breadcrumb bar, and move Back and Forward through the folders you visited.
 - **Reveal in Explorer**: double-click a file to open its location with the file selected.
+- **Explorer's right-click menu**: right-click a file or folder in the Tree view or the Treemap for Windows Explorer's own context menu; anything you delete there is marked in red until the next Scan.
 - **Logical size or Allocated size**: measure by the bytes a file claims or the bytes it occupies on disk (the default).
 - **Hard links counted once**: a file with several names shows under each parent, but its size counts only once.
 

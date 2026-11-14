@@ -59,6 +59,7 @@
         <li><strong>File type Colouring and Highlight.</strong> Colour by size rank or by your own Colour groups, then highlight one File type to see every place it sits.</li>
         <li><strong>Zoom root with breadcrumbs.</strong> Zoom into any folder, jump back up via the breadcrumb bar, and move Back and Forward through your Zoom history.</li>
         <li><strong>Reveal in Explorer.</strong> Double-click a file in the Tree view or the Treemap to open its folder with the file selected.</li>
+        <li><strong>Explorer's right-click menu.</strong> Right-click a file or folder in the Tree view or the Treemap for Windows Explorer's own context menu; anything you delete there is marked in red until the next Scan.</li>
         <li><strong>Allocated or Logical size.</strong> See what files occupy on disk (the default) or the bytes they claim to hold, with one toggle.</li>
         <li><strong>Hard links counted once.</strong> A file with several names shows under each folder but its size is only counted once.</li>
       </ul>
@@ -69,7 +70,7 @@
       <ul>
         <li>Windows 10 or 11, 64-bit (x64).</li>
         <li>NTFS Volumes. Other file systems (FAT32, exFAT, network shares) cannot be scanned.</li>
-        <li>Administrator rights. Windows only lets elevated programs read a Volume's Master File Table, which is what makes the Scan fast, so DiskScan asks for them when it starts. It only reads; it never changes or deletes files.</li>
+        <li>Administrator rights. Windows only lets elevated programs read a Volume's Master File Table, which is what makes the Scan fast, so DiskScan asks for them when it starts. DiskScan itself only reads. The right-click menu is Windows Explorer's own, so any action you choose there (open, delete, properties…) is carried out by Windows exactly as it would be in Explorer.</li>
       </ul>
     </section>
 
